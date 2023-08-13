@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "test": "node --test test/",
+    "test:watch": "node --watch --test test/",
+    "test:coverage": "npx c8 --100 --all --exclude src/index.js node --test test/"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +17,7 @@
     "node": "v20.5.0"
   },
   "dependencies": {
-    "lokijs": "^1.5.12"
+    "lokijs": "^1.5.12",
+    "sinon": "^15.2.0"
   }
 }
